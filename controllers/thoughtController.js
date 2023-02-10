@@ -1,6 +1,4 @@
 const { Thought, User } = require('../models');
-// const Thought = require('../models/Thought');
-// const User = require('../models/User');
 
 const thoughtController = {
     async getThoughts(req, res) {
