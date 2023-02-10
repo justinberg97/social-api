@@ -2,6 +2,7 @@ const { User, Thought } = require("../models");
 
 const userController = {
   async getUsers(req, res) {
+    console.log('hello')
     try {
       const dbUserData = await User.find().select("-__v");
       res.json(dbUserData);

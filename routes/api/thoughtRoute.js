@@ -8,7 +8,7 @@ updateThought,
 deleteThought,
 addReaction,
 removeReaction,
-} = require("../../controllers/thought-controller");
+} = require("../../controllers/thoughtController");
 
 // Define routes for thoughts
 router.get("/", getThoughts);

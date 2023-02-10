@@ -8,19 +8,18 @@ updateUser,
 deleteUser,
 addFriend,
 removeFriend,
-} = require('../../controllers/user-controller');
+} = require('../../controllers/userController');
 
-const userRoutes = (app) => {
-app.get('/', getUsers);
-app.post('/', createUser);
 
-app.get('/:userId', getSingleUser);
-app.put('/:userId', updateUser);
-app.delete('/:userId', deleteUser);
+router.get('/', getUsers);
+router.post('/', createUser);
 
-app.post('/:userId/friends/:friendId', addFriend);
-app.delete('/:userId/friends/:friendId', removeFriend);
-};
+router.get('/:userId', getSingleUser);
+router.put('/:userId', updateUser);
+router.delete('/:userId', deleteUser);
+
+router.post('/:userId/friends/:friendId', addFriend);
+router.delete('/:userId/friends/:friendId', removeFriend);
 
 module.exports = router;
 
